@@ -21,9 +21,9 @@ const App = () => {
         setError(null);
       })
       .catch((err) => {
-        setError(`Error fetching current weather for : `, error);
+        setError(`Error fetching weather forecast. Please try again later`);
       });
-  }, [zip, error]);
+  }, [zip]);
 
   useEffect(() => {
     getForecast(zip)
@@ -31,10 +31,12 @@ const App = () => {
         setForecast(data);
         setError(null);
       })
-      .catch((err) => {
-        setError(`Error fetching forecast for zip ${zip}:`, error);
+      .catch(() => {
+        setError(
+          `Error fetching forecast. Please type in the correct zip code`
+        );
       });
-  }, [zip, error]);
+  }, [zip]);
 
   //Get and Set Zip from Search
   const handleKeyDown = (e) => {
