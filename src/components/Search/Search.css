@@ -1,0 +1,48 @@
+.search {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.search div {
+  position: relative;
+}
+
+.search .searchIcon {
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 26px;
+  height: 26px;
+}
+
+.search input {
+  background-color: transparent;
+  color: #fff !important;
+  padding-left: 35px;
+  font-family: "Gilda Display", serif;
+  font-size: 20px;
+  line-height: 1;
+  cursor: auto;
+  border: 0;
+  border-bottom: 2px solid #fff;
+}
+
+.search input::placeholder {
+  color: #fff !important;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.search input::-webkit-input-placeholder {
+  color: #1d1d1d;
+}
+
+.search input:focus::-webkit-input-placeholder {
+  color: #fff;
+}

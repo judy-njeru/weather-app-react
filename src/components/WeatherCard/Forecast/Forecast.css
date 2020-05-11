@@ -1,0 +1,66 @@
+.days {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 18px;
+  grid-area: day / day / day / day;
+  box-shadow: rgba(255, 255, 255, 0.65) 5px -5px 0px;
+  background-color: #41a2f0;
+}
+
+.days:nth-child(2) {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  grid-area: day2 / day2 / day2;
+}
+
+.days:nth-child(3) {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  grid-area: day3 / day3 / day3;
+}
+
+.days:nth-child(4) {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  grid-area: day4 / day4 / day4;
+}
+
+.days:nth-child(5) {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  grid-area: day5 / day5 / day5;
+}
+
+@media screen and (max-width: 767px) {
+  .days {
+    position: initial;
+    display: flex;
+    grid-area: unset;
+    margin-bottom: 20px;
+  }
+
+  .days:nth-child(1),
+  .days:nth-child(2),
+  .days:nth-child(3),
+  .days:nth-child(4),
+  .days:nth-child(5) {
+    position: initial;
+    grid-area: unset;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .days {
+    font-size: 14px;
+  }
+}
